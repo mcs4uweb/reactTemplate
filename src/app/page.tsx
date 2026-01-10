@@ -6,7 +6,7 @@ import { useAuth } from '../contexts/AuthContext';
 
 const features = [
   {
-    title: 'Track Every Asset',
+    title: 'Template',
     description:
       'Keep tabs on vehicles, bikes, and household equipment with structured records and maintenance logs.',
   },
@@ -46,7 +46,7 @@ export default function LandingPage() {
             template
           </span>
           <h1 className='text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl'>
-            Templat Header
+            Template Header
           </h1>
           <p className='text-lg text-gray-600'>
             A single hub to log vehicles, record upkeep, and plan upcoming part
@@ -65,12 +65,6 @@ export default function LandingPage() {
               className='inline-flex items-center justify-center rounded-md border border-blue-600 px-6 py-3 text-sm font-semibold text-blue-600 transition hover:bg-blue-50'
             >
               Explore the platform
-            </Link>
-            <Link
-              href='/blog'
-              className='inline-flex items-center justify-center rounded-md border border-blue-600 px-6 py-3 text-sm font-semibold text-blue-600 transition hover:bg-blue-50'
-            >
-              Read the blog
             </Link>
           </div>
         </div>
@@ -118,7 +112,7 @@ export default function LandingPage() {
                 <span className='text-blue-600 font-bold'>1</span>
               </div>
               <h3 className='text-lg font-semibold mb-2 text-black'>
-                Add Your Assets
+                template
               </h3>
               <p className='text-gray-600'>
                 Input items with easy forms—upload photos and assign locations
@@ -130,7 +124,7 @@ export default function LandingPage() {
                 <span className='text-blue-600 font-bold'>2</span>
               </div>
               <h3 className='text-lg font-semibold mb-2 text-black'>
-                Track & Manage
+               template
               </h3>
               <p className='text-gray-600'>
                 Monitor status, depreciation, and maintenance schedules with
@@ -142,7 +136,7 @@ export default function LandingPage() {
                 <span className='text-blue-600 font-bold'>3</span>
               </div>
               <h3 className='text-lg font-semibold mb-2 text-black'>
-                Upgrade for Pro
+                template
               </h3>
               <p className='text-gray-600'>
                 Unlock AI tools, unlimited assets, and detailed reports with a
@@ -155,7 +149,7 @@ export default function LandingPage() {
       <section id='features' className='bg-white py-16'>
         <div className='mx-auto max-w-5xl px-6'>
           <h2 className='text-center text-2xl font-semibold text-gray-900 sm:text-3xl'>
-            Why owners choose Vehicle Assets Manager
+            template
           </h2>
           <div className='mt-10 grid gap-8 md:grid-cols-3'>
             {features.map((feature) => (

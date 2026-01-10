@@ -139,7 +139,7 @@ export default function PaymentPage() {
 
           <div className='rounded-lg bg-white p-6 shadow'>
             <div className='mb-4'>
-              <h2 className='text-lg font-semibold text-gray-900'>Asset Manager Pro</h2>
+              <h2 className='text-lg font-semibold text-gray-900'>template</h2>
               <p className='text-sm text-gray-600'>$2.99 per month</p>
             </div>
 
