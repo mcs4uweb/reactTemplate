@@ -1,0 +1,36 @@
+/* src/app/globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html.dark {
+  color-scheme: dark;
+}
+
+@layer base {
+  body {
+    @apply bg-gray-50 text-gray-900 antialiased;
+  }
+
+  html.dark body {
+    @apply bg-gray-900 text-gray-100;
+  }
+}
+
+/* AI description fade animation */
+@keyframes ai-fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.ai-fade {
+  animation: ai-fade 1s ease-in-out infinite alternate;
+}
