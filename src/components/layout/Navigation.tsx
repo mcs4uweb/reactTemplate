@@ -83,22 +83,22 @@ const Navigation: React.FC = () => {
 
   const navigation = [
     { name: 'Dashboard', href: '/dashboard', current: pathname === '/dashboard' },
-    { name: 'My Assets', href: '/home', current: pathname === '/home' },
+  /*   { name: 'My Assets', href: '/home', current: pathname === '/home' }, */
+    { name: '1040 Tax Form', href: '/tax-form', current: pathname === '/tax-form' },
     { name: 'Calendar', href: '/calender', current: pathname === '/calender' },
     {
       name: 'Tasks',
       href: '/tasks',
       current: pathname === '/tasks',
     },
-    { name: 'Blog', href: '/blog', current: pathname.startsWith('/blog') },
-    {
+    /* {
       name: 'Asset Manager Pro',
       href: '/asset-manager-pro',
       current: pathname === '/asset-manager-pro',
-    },
+    }, */
     { name: 'Ask AI', href: '/chat', current: pathname === '/chat' },
-    { name: 'Cart', href: '/cart', current: pathname === '/cart' },
-    { name: 'My Orders', href: '/myorders', current: pathname === '/myorders' },
+  /*   { name: 'Cart', href: '/cart', current: pathname === '/cart' },
+    { name: 'My Orders', href: '/myorders', current: pathname === '/myorders' }, */
     { name: 'Settings', href: '/settings', current: pathname === '/settings' },
   ];
 

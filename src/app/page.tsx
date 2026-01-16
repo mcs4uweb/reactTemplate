@@ -46,7 +46,7 @@ export default function LandingPage() {
             template
           </span>
           <h1 className='text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl'>
-            Template Header
+            AI Tax Filing
           </h1>
           <p className='text-lg text-gray-600'>
             A single hub to log vehicles, record upkeep, and plan upcoming part
@@ -72,6 +72,11 @@ export default function LandingPage() {
           <div className='absolute -top-6 -right-6 h-24 w-24 rounded-full bg-blue-100 blur-2xl' />
           <div className='absolute -bottom-6 -left-6 h-32 w-32 rounded-full bg-blue-200 blur-3xl' />
           <div className='relative space-y-4'>
+            <img
+              src='/svgs/tax-filing-season.svg'
+              alt='Tax filing season illustration'
+              className='w-full rounded-xl border border-blue-100 bg-white'
+            />
             <h2 className='text-lg font-semibold text-gray-800'>At a glance</h2>
             <ul className='space-y-3 text-sm text-gray-600'>
               <li className='flex items-start gap-3'>
