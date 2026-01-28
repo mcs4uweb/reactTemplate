@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import FormsHeader from '../../../components/forms/FormsHeader';
+import FormDrawer from '../../../components/forms/FormDrawer';
 
 const US_STATES = [
   { code: 'AL', name: 'Alabama' },
@@ -866,6 +867,8 @@ export default function Page9() {
           </div>
         </div>
       </div>
+
+      <FormDrawer currentPage="Page 9" pageTitle="W-2 Form Details" />
     </>
   );
 }

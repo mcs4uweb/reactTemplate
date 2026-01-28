@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import FormsHeader from '../../../components/forms/FormsHeader';
+import FormDrawer from '../../../components/forms/FormDrawer';
 
 export default function Page3() {
   const router = useRouter();
@@ -333,6 +334,8 @@ Change filing status — Click Save and Continue (Tracey's information will be r
         </div>
       </div>
     </div>
+
+      <FormDrawer currentPage="Page 3" pageTitle="Spouse Information" />
     </>
   );
 }

@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import FormsHeader from '../../../components/forms/FormsHeader';
+import FormDrawer from '../../../components/forms/FormDrawer';
 
 export default function Page5() {
   const router = useRouter();
@@ -253,6 +254,8 @@ export default function Page5() {
           </div>
         </div>
       </div>
+
+      <FormDrawer currentPage="Page 5" pageTitle="Contact Information & Identity PIN" />
     </>
   );
 }

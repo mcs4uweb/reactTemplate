@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import FormsHeader from '../../../components/forms/FormsHeader';
+import FormDrawer from '../../../components/forms/FormDrawer';
 
 interface Dependent {
   id: string;
@@ -312,6 +313,8 @@ export default function Page4() {
           </div>
         </div>
       </div>
+
+      <FormDrawer currentPage="Page 4" pageTitle="Dependents Information" />
     </>
   );
 }

@@ -1,12 +1,13 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import FormsHeader from '../../../components/forms/FormsHeader';
+import FormDrawer from '../../../components/forms/FormDrawer';
 
 export default function Page1() {
   const router = useRouter();
-  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  const yourInfoRef = useRef<HTMLElement>(null);
   const [formData, setFormData] = useState({
     taxComfortLevel: '',
     firstName: '',
@@ -58,6 +59,14 @@ export default function Page1() {
     router.push('/forms/page2');
   };
 
+  useEffect(() => {
+    if (formData.taxComfortLevel === 'comfortable' && yourInfoRef.current) {
+      setTimeout(() => {
+        yourInfoRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 300);
+    }
+  }, [formData.taxComfortLevel]);
+
   return (
     <>
       <FormsHeader currentStep="personal" />
@@ -66,6 +75,7 @@ export default function Page1() {
         <h1 className="text-2xl font-bold text-center mb-6">U.S. Individual Income Tax Return</h1>
 
         <section className="mb-8 border-b pb-6">
+          <h2 className="text-lg font-bold text-gray-900 mb-4">Questionnaire</h2>
           <h3 className="font-medium text-gray-900 mb-2">
             How comfortable do you feel doing your own taxes?
           </h3>
@@ -106,6 +116,53 @@ export default function Page1() {
               />
               <span className="ml-3 text-sm text-gray-700">Prefer an expert handle my taxes</span>
             </label>
+          </div>
+        </section>
+
+        {/* Security Section */}
+        <section className="mb-8 border-b pb-8">
+          <div className="flex items-center gap-2 mb-4">
+            <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+            </svg>
+            <h2 className="text-xl font-semibold text-gray-900">We take security seriously.</h2>
+          </div>
+
+          <p className="text-gray-700 mb-4">
+            Your sensitive information is encrypted before being stored in our database. We use industry-standard encryption to protect critical data such as Social Security Numbers, email addresses, and other personally identifiable information.
+          </p>
+
+          <div className="bg-gray-50 border border-gray-300 rounded-lg p-4 mb-3">
+            <div className="flex items-center justify-between mb-2">
+              <span className="text-sm font-semibold text-gray-700">Example of Encrypted Data:</span>
+            </div>
+            <pre className="bg-gray-900 text-green-400 p-4 rounded-md overflow-x-auto text-xs font-mono">
+{`[{ssn: "qppMQV2aOHpyF+V5m0jiIK0Hp8ykS5YFfSj/6HJjfjIwMA==", ...}]
+0: {email: "ZzesMQV2aOHpyF+V5m0jiIK0Hp8ykS5YFfSj$T67fsdffMO==", ...}`}
+            </pre>
+          </div>
+
+          <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+            <h3 className="font-semibold text-blue-900 mb-2 flex items-center gap-2">
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              How it works:
+            </h3>
+            <ul className="text-sm text-gray-700 space-y-2">
+              <li className="flex items-start">
+                <span className="text-blue-600 mr-2">•</span>
+                <span>Your data is encrypted before being transmitted to our servers</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-blue-600 mr-2">•</span>
+                <span>Encrypted data is stored securely in our database</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-blue-600 mr-2">•</span>
+                <span>Only authorized systems can decrypt your information when needed</span>
+              </li>
+            </ul>
           </div>
         </section>
 
@@ -379,7 +436,7 @@ export default function Page1() {
 
         {formData.taxComfortLevel === 'comfortable' && (
         <>
-        <section className="mb-8 border-b pb-4">
+        <section ref={yourInfoRef} className="mb-8 border-b pb-4">
           <h2 className="text-xl font-semibold mb-4">Your Information</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
@@ -1039,6 +1096,8 @@ export default function Page1() {
         )}
       </div>
     </div>
+
+      <FormDrawer currentPage="Page 1" pageTitle="Personal Information & Tax Comfort Level" />
     </>
   );
 }

@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import FormsHeader from '../../../components/forms/FormsHeader';
+import FormDrawer from '../../../components/forms/FormDrawer';
 
 export default function Page2() {
   const router = useRouter();
@@ -173,6 +174,8 @@ export default function Page2() {
         </div>
       </div>
     </div>
+
+      <FormDrawer currentPage="Page 2" pageTitle="Filing Status Selection" />
     </>
   );
 }
