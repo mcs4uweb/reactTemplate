@@ -84,6 +84,7 @@ const Navigation: React.FC = () => {
   const navigation = [
     { name: 'Dashboard', href: '/dashboard', current: pathname === '/dashboard' },
   /*   { name: 'My Assets', href: '/home', current: pathname === '/home' }, */
+    { name: 'Start Return', href: '/forms/page1', current: pathname === '/forms/page1' },
     { name: '1040 Tax Form', href: '/tax-form', current: pathname === '/tax-form' },
     { name: 'Calendar', href: '/calender', current: pathname === '/calender' },
     {
@@ -119,7 +120,7 @@ const Navigation: React.FC = () => {
                 href='/'
                 className='text-xl font-bold text-blue-600 transition hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300'
               >
-                Pro Personal Aid
+                Open Source Tax Filing
               </Link>
             </div>
 
